@@ -42,10 +42,9 @@ namespace App8
             var ScannerPage = new ZXingScannerPage();
 
             ScannerPage.OnScanResult += (result) => {
-                // Parar de escanear
+              
                 ScannerPage.IsScanning = false;
 
-                // Alert com o código escaneado
                 Device.BeginInvokeOnMainThread(() => {
                     Navigation.PopAsync();
                     ResultLabel.Text = result.Text;
